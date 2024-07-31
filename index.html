@@ -3,29 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
     <title>AI Models Comparison</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>AI Models Comparison</h1>
-    <input type="text" id="searchBar" onkeyup="searchTable()" placeholder="Search for models..">
-    <table>
-        <thead>
-            <tr>
-                <th>Model</th>
-                <th>Performance</th>
-                <th>Description</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Gemini</td>
-                <td class="excellent" title="Best performance in the category">Excellent</td>
-                <td>A large-scale model known for its accuracy in language tasks.</td>
-            </tr>
-            <!-- Add more rows as needed -->
-        </tbody>
+    <h1>AI Models Comparison for Business Applications</h1>
+    <table id="comparisonTable">
+        <tr>
+            <th>Aspect</th>
+            <th>Gemini</th>
+            <th>Claude</th>
+            <th>ChatGPT</th>
+            <th>LLAMA</th>
+        </tr>
     </table>
+    <p>Rating system: Excellent (Dark Green), Very Good (Light Green), Good (Yellow), Fair (Orange), Limited (Red)</p>
+    <p>Note: This information is based on the most recent publicly available data and may be subject to change as these AI models are rapidly evolving.</p>
+
     <script src="script.js"></script>
 </body>
 </html>

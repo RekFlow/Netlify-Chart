@@ -1,42 +1,36 @@
-/* Add a more modern color scheme and fonts */
-body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #f4f4f9;
-    color: #333;
+body { 
+    font-family: Arial, sans-serif; 
+    margin: 20px; 
 }
-
-h1, h2, h3 {
-    color: #2c3e50;
+table { 
+    border-collapse: collapse; 
+    width: 100%; 
 }
-
-table {
-    width: 100%;
-    border-collapse: collapse;
+th, td { 
+    border: 1px solid #ddd; 
+    padding: 8px; 
+    text-align: left; 
 }
-
-th, td {
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
-    text-align: center;
+th { 
+    background-color: #f2f2f2; 
 }
-
-th {
-    background-color: #34495e;
-    color: white;
+.excellent { 
+    background-color: #1a7f37; 
+    color: white; 
 }
-
-td {
-    background-color: #ecf0f1;
+.very-good { 
+    background-color: #2ea043; 
+    color: white; 
 }
-
-/* Hover effects */
-td:hover {
-    background-color: #d0e4f5;
-    cursor: pointer;
+.good { 
+    background-color: #d29922; 
+    color: black; 
 }
-
-/* Add color coding */
-.excellent { background-color: #27ae60; }
-.good { background-color: #2ecc71; }
-.average { background-color: #f39c12; }
-.limited { background-color: #e74c3c; }
+.fair { 
+    background-color: #e36209; 
+    color: white; 
+}
+.limited { 
+    background-color: #cf222e; 
+    color: white; 
+}
