@@ -1,5 +1,31 @@
-<canvas id="performanceChart" width="400" height="200"></canvas>
-<button onclick="toggleDetails()">Toggle Details</button>
-<div id="details" style="display:none;">Extra details here...</div>
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>AI Models Comparison</title>
+</head>
+<body>
+    <h1>AI Models Comparison</h1>
+    <input type="text" id="searchBar" onkeyup="searchTable()" placeholder="Search for models..">
+    <table>
+        <thead>
+            <tr>
+                <th>Model</th>
+                <th>Performance</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Gemini</td>
+                <td class="excellent" title="Best performance in the category">Excellent</td>
+                <td>A large-scale model known for its accuracy in language tasks.</td>
+            </tr>
+            <!-- Add more rows as needed -->
+        </tbody>
+    </table>
+    <script src="script.js"></script>
+</body>
+</html>

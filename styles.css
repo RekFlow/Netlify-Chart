@@ -1,5 +1,42 @@
-.excellent::before { content: "⭐"; }
-.very-good::before { content: "✅"; }
-.good::before { content: "👍"; }
-.fair::before { content: "⚠️"; }
-.limited::before { content: "❌"; }
+/* Add a more modern color scheme and fonts */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+h1, h2, h3 {
+    color: #2c3e50;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+th {
+    background-color: #34495e;
+    color: white;
+}
+
+td {
+    background-color: #ecf0f1;
+}
+
+/* Hover effects */
+td:hover {
+    background-color: #d0e4f5;
+    cursor: pointer;
+}
+
+/* Add color coding */
+.excellent { background-color: #27ae60; }
+.good { background-color: #2ecc71; }
+.average { background-color: #f39c12; }
+.limited { background-color: #e74c3c; }
