@@ -1,36 +1,42 @@
-body { 
-    font-family: Arial, sans-serif; 
-    margin: 20px; 
+/* styles.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background-color: #f8f8f8; /* Light background */
 }
-table { 
-    border-collapse: collapse; 
-    width: 100%; 
+
+h1 {
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
-th, td { 
-    border: 1px solid #ddd; 
-    padding: 8px; 
-    text-align: left; 
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 800px; /* Limit table width */
+  margin-bottom: 20px; /* Add space below table */
 }
-th { 
-    background-color: #f2f2f2; 
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 12px; /* Increase padding */
+  text-align: left;
 }
-.excellent { 
-    background-color: #1a7f37; 
-    color: white; 
+
+th {
+  background-color: #e0e0e0; /* Slightly darker header */
+  font-weight: bold;
 }
-.very-good { 
-    background-color: #2ea043; 
-    color: white; 
-}
-.good { 
-    background-color: #d29922; 
-    color: black; 
-}
-.fair { 
-    background-color: #e36209; 
-    color: white; 
-}
-.limited { 
-    background-color: #cf222e; 
-    color: white; 
+
+/* Rating colors (adjusted for better contrast) */
+.excellent { background-color: #1a7f37; color: white; }
+.very-good { background-color: #2ea043; color: white; }
+.good { background-color: #d29922; color: #333; } /* Darker text */
+.fair { background-color: #e36209; color: white; }
+.limited { background-color: #d93f3f; color: white; } /* Slightly brighter red */
+
+/* Model name cell styling */
+td:nth-child(2), td:nth-child(3), td:nth-child(4), td:nth-child(5) {
+  border-left: 2px solid #ddd; /* Visual separator */
 }
