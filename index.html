@@ -1,26 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Models Comparison</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <h1>AI Models Comparison for Business Applications</h1>
-    <input type="text" id="searchBar" onkeyup="searchTable()" placeholder="Search for aspects..">
-    <table id="comparisonTable">
-        <tr>
-            <th>Aspect</th>
-            <th>Gemini</th>
-            <th>Claude</th>
-            <th>ChatGPT</th>
-            <th>LLAMA</th>
-        </tr>
-    </table>
-    <p>Rating system: Excellent (Dark Green), Very Good (Light Green), Good (Yellow), Fair (Orange), Limited (Red)</p>
-    <p>Note: This information is based on the most recent publicly available data and may be subject to change as these AI models are rapidly evolving.</p>
+<canvas id="performanceChart" width="400" height="200"></canvas>
+<button onclick="toggleDetails()">Toggle Details</button>
+<div id="details" style="display:none;">Extra details here...</div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-    <script src="script.js"></script>
-</body>
-</html>

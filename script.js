@@ -1,23 +1,14 @@
-const aspects = [
-    { name: 'Natural language processing', icon: '💬' },
-    { name: 'Multimodal abilities', icon: '📷' },
-    { name: 'Reasoning and problem-solving', icon: '🧠' },
-    { name: 'Specialized knowledge domains', icon: '📚' },
-    { name: 'Ethical considerations and safety', icon: '🛡️' },
-    { name: 'Ease of integration', icon: '🔧' },
-    { name: 'Scalability and performance', icon: '⚡' }
-];
+// Function to toggle visibility of additional details
+function toggleDetails() {
+    var details = document.getElementById('details');
+    if (details.style.display === "none") {
+        details.style.display = "block";
+    } else {
+        details.style.display = "none";
+    }
+}
 
-const data = {
-    'Natural language processing': {
-        Gemini: { rating: 'Excellent', description: 'Advanced NLP with multilingual support' },
-        Claude: { rating: 'Excellent', description: 'Sophisticated language understanding and generation' },
-        ChatGPT: { rating: 'Excellent', description: 'High-quality language processing across various tasks' },
-        LLAMA: { rating: 'Very Good', description: 'Strong NLP capabilities, especially in open-source context' }
-    },
-    // Other aspects follow...
-};
-
+// Populating the comparison table
 const table = document.getElementById('comparisonTable');
 aspects.forEach(aspect => {
     const row = table.insertRow();
@@ -28,26 +19,27 @@ aspects.forEach(aspect => {
         const { rating, description } = data[aspect.name][model];
         cell.innerHTML = `<strong>${rating}</strong><br>${description}`;
         cell.className = rating.toLowerCase().replace(' ', '-');
+        cell.title = description; // Tooltip
     });
 });
 
-function searchTable() {
-    var input, filter, table, tr, td, i, txtValue;
-    input = document.getElementById("searchBar");
-    filter = input.value.toUpperCase();
-    table = document.getElementById("comparisonTable");
-    tr = table.getElementsByTagName("tr");
-    for (i = 1; i < tr.length; i++) {
-        tr[i].style.display = "none";
-        td = tr[i].getElementsByTagName("td");
-        for (var j = 0; j < td.length; j++) {
-            if (td[j]) {
-                txtValue = td[j].textContent || td[j].innerText;
-                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                    tr[i].style.display = "";
-                    break;
-                }
+// Example chart implementation (you need Chart.js library)
+const ctx = document.getElementById('performanceChart').getContext('2d');
+const performanceChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ['Gemini', 'Claude', 'ChatGPT', 'LLAMA'],
+        datasets: [{
+            label: 'Overall Performance',
+            data: [5, 4, 3, 2], // Replace with actual data
+            backgroundColor: ['#1a7f37', '#2ea043', '#d29922', '#e36209'],
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
             }
         }
     }
-}
+});
